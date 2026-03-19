@@ -406,6 +406,51 @@ text-decoration: underline;
 
 
 
+.behind__the__scene__figure {
+    cursor: pointer;
+}
+.behind__the__scene__figure:hover {
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.71);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.lightbox__content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+.lightbox__content img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+.lightbox__close {
+    position: absolute;
+    top: -2rem;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: "Bebbas";
+}
+
+
+
+
+
+
+
 @media (max-width: 1012px) {
 
     .section{

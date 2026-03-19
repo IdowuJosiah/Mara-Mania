@@ -1,6 +1,8 @@
+"use client"
 import "./Hero.css"
 const heroImage = "/Group9.png";
 const heroLogos = "/Logos.png";
+import { useState } from "react";
 
 
 const exhibitionImages = {
@@ -47,6 +49,7 @@ const credits = [
 ]
 export default function Home() {
     const maraManiaText = [ "MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA",]
+    const [selectedImage, setSelectedImage] = useState(null);
 
 
   return (
@@ -212,11 +215,11 @@ export default function Home() {
                     </h1>
                 </div>
                 <div className="behind__the__scene__body">
-                        {behindTheSceneImages.map((image, index) => (
-                            <figure key={index}>
-                                <img src={behindTheSceneImages[index]} alt="heroimage" />
-                            </figure>
-                        ))}
+                    {behindTheSceneImages.map((image, index) => (
+                        <figure key={index} onClick={() => setSelectedImage(image)} className="behind__the__scene__figure">
+                            <img src={`/${image}`} alt={`bts ${index + 1}`} />
+                        </figure>
+                    ))}
                 </div>
 
             </div>
@@ -267,6 +270,14 @@ export default function Home() {
                   </p>
               </div>
           </section>
+          {selectedImage && (
+              <div className="lightbox" onClick={() => setSelectedImage(null)}>
+                  <div className="lightbox__content" onClick={(e) => e.stopPropagation()}>
+                      <button className="lightbox__close" onClick={() => setSelectedImage(null)}>✕</button>
+                      <img src={`/${selectedImage}`} alt="bts fullscreen" />
+                  </div>
+              </div>
+          )}
       </div>
   );
 }
