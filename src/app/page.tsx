@@ -49,8 +49,7 @@ const credits = [
 ]
 export default function Home() {
     const maraManiaText = [ "MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA",]
-    const [selectedImage, setSelectedImage] = useState(null);
-
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
       <div>
