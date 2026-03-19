@@ -1,65 +1,272 @@
-import Image from "next/image";
+import "./Hero.css"
+const heroImage = "/Group9.png";
+const heroLogos = "/Logos.png";
 
+
+const exhibitionImages = {
+    main: "/bts8.jpg",
+    sub1: "/Still 2025-10-31 143904_1.3.7.webp",
+    sub2: "/Still 2025-11-10 084014_1.1.1.jpg",
+    sub3: "/Still 2025-10-31 143904_1.4.4.jpg",
+}
+const behindTheSceneImages = [
+     "bts1.webp",
+     "bts2.webp",
+    "bts3.webp",
+     "bts4.webp",
+     "bts5.webp",
+     "bts6.webp",
+   "bts7.webp",
+    "bts8.jpg",
+   "bts9.jpg",
+
+
+]
+
+
+const credits = [
+    { role: "Directed by", name: "Feranmi Abiola" },
+    { role: "Executive Producers", name: "Marianne Ournac, Dolapo Amusat, Dunsin Bankole" },
+    { role: "Produced by", name: "Tochukwu Uchefunah" },
+    { role: "Director of Photography", name: "Boluwatife Bakare" },
+    { role: "Associate Producer", name: "Anuoluwapo Sangokunle" },
+    { role: "Written by", name: "Feranmi Abiola" },
+    { role: "Story Consultant", name: "Anuoluwapo Sangokunle" },
+    { role: "Edited by", name: "Feranmi Abiola, Boluwatife Bakare" },
+    { role: "Second Unit Camera", name: "David Ogunsiakan, Anuoluwapo Sangokunle" },
+    { role: "Sound Recording", name: "[Location Sound Recordist]" },
+    { role: "Sound Design / Mixing", name: "[Sound Designer / Mixer]" },
+    { role: "Original Score / Music by", name: "[Composer / Music Producer]" },
+    { role: "Original Songs by", name: "[Artist(s)]" },
+    { role: "Color / Grading by", name: "Feranmi Abiola" },
+    { role: "Motion Graphics / VFX", name: "Feranmi Abiola, Jacinta Mbewu" },
+    { role: "Production Manager", name: "[Name(s)]" },
+    { role: "Production Assistants", name: "Michael Edokpyai, Moyosoore" },
+    { role: "Production Videography", name: "David Ogunsiakan" },
+    { role: "Creative Director", name: "Dunsin Bankole" },
+]
 export default function Home() {
+    const maraManiaText = [ "MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA",]
+
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      <div>
+          <section className="section h">
+            <div className="hero">
+                <div className="hero__image">
+                    <img src={heroImage} alt="heroimage" />
+                </div>
+                <div className="hero__content">
+                    <div className="hero__title">
+                        <p>
+                            MARA
+                        </p>
+                        <p>
+                            MANIA
+                        </p>
+                    </div>
+                    <div className="hero__description">
+                        <p> THE DOCUMENTARY</p>
+                        <div className="hero__credits">
+                            <span className="hero__credits__positions">DIRECTED BY - </span><span className="hero__credits__names">BOLUWATIFE BAKARE</span>
+                        </div>
+                        <div className="hero__credits">
+                            <span className="hero__credits__positions">CINEMATOGRAPHY - </span><span className="hero__credits__names">FERANMI ABIOLA</span><span className="hero__credits__positions"> PRODUCED - </span><span className="hero__credits__names">TOCHUKWU UCHEFUNAH </span>
+                            <span className="hero__credits__positions">EXECUTIVE PRODUCERS - </span><span className="hero__credits__names">MARRIANE OURNAC</span>, <span className="hero__credits__names">DOLAPO AMUSAT</span>, <span className="hero__credits__names">DUNSIN BANKOLE</span>
+                        </div>
+                    </div>
+                    <div className="hero__logos">
+                        <p>
+                            <img src={heroLogos} alt="heroimage" />
+                        </p>
+                    </div>
+                </div>
+            </div>
+          </section>
+          <section className="section i">
+              <div className="intro">
+                  <div className="intro__hero">
+                      <h1>
+                          LOGLINE
+                      </h1>
+                      <p>
+                          “Mara Mania” explores the rise of Mara music
+                          from the streets of Lagos, tracing how DJs, dancers,
+                          and digital culture transformed a raw
+                          underground sound into one of the
+                          city’s most explosive new movements.
+                      </p>
+                  </div>
+                  <div className="intro__description">
+                      <h1>
+                          SYNOPSIS
+                      </h1>
+                      <div>
+                          <p>
+                              Mara Mania is a documentary that explores
+                              the rise of Mara music, a high-energy
+                              street sound emerging from Lagos.
+                              Built on rapid rhythms, dramatic sound
+                              effects and viral dance culture, the
+                              genre has grown from neighborhood studios
+                              and dance circles into one of the city’s
+                              most vibrant underground movements.
+                          </p>
+                          <p>
+                              Through conversations with DJs, dancers and
+                              producers at the center of the scene, the
+                              film traces the origins of Mara while
+                              capturing the communities that sustain it.
+                              Moving between intimate studio sessions,
+                              street performances and the digital spaces
+                              where the sound spreads, Mara Mania documents
+                              a grassroots cultural movement in real time.
+                          </p>
+                      </div>
+
+                  </div>
+                  <div className="intro__video">
+                      <div className="intro__video__backgrounding">
+                          <p>
+                              {maraManiaText.map((text, index) => (
+                                  <p key={index}>
+                                      {text}
+                                  </p>
+                              ))}
+                          </p>
+                          <p>
+                              {maraManiaText.map((text, index) => (
+                                  <p key={index}>
+                                      {text}
+                                  </p>
+                              ))}
+                          </p>
+                          <p>
+                              {maraManiaText.map((text, index) => (
+                                  <p key={index}>
+                                      {text}
+                                  </p>
+                              ))}
+                          </p>
+                      </div>
+                      <div className="intro__youtube_video__section">
+                          <section>
+                              <iframe className="youtube__video"
+                                      src="https://www.youtube.com/embed/sObg5b2nx44?si=871ZKlRg7Vk2ISh8"
+                                      title="YouTube video player" frameBorder="0"
+                                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                      referrerPolicy="strict-origin-when-cross-origin"
+                                      allowFullScreen>
+                              </iframe>
+                              <div className="youtube__video__watch__buttons">
+                                  <p>
+                                      CLICK TO WATCH MARAMANIA TRAILER
+                                  </p>
+                                  <p>
+                                      +
+                                  </p>
+                                  <p>
+                                      REQUEST ACCESS TO FULLCUT
+                                  </p>
+                              </div>
+
+                          </section>
+
+                      </div>
+                  </div>
+              </div>
+
+          </section>
+          <section className="section e">
+
+            <div className="exhibition">
+                <section className="exhibition__header">
+                    <h1>MARA MANIA EXHIBITION</h1>
+                </section>
+                <section className="exhibition__content">
+                    <div className="exhibition__main__image">
+                        <figure>
+                            <img src={exhibitionImages.sub2} alt="heroimage" />
+                        </figure>
+                    </div>
+                    <div className="exhibition__sub">
+                        <figure>
+                            <img src={exhibitionImages.sub1} alt="heroimage" />
+                        </figure>
+                        <figure>
+                            <img src={exhibitionImages.main} alt="heroimage" />
+                        </figure>
+                        <figure>
+                            <img src={exhibitionImages.sub3} alt="heroimage" />
+                        </figure>
+                    </div>
+
+                </section>
+            </div>
+          </section>
+          <section className="section bts">
+            <div className="behind__the__scene">
+                <div className="behind__the__scene__header">
+                    <h1>
+                        BEHIND THE SCENES
+                    </h1>
+                </div>
+                <div className="behind__the__scene__body">
+                        {behindTheSceneImages.map((image, index) => (
+                            <figure key={index}>
+                                <img src={behindTheSceneImages[index]} alt="heroimage" />
+                            </figure>
+                        ))}
+                </div>
+
+            </div>
+
+          </section>
+          <section className="section details c">
+            <div className="credits__section">
+                <div className="credits__section__container">
+                    <h1>
+                            CREDITS
+                    </h1>
+                    <p>
+                        <div className="credits">
+                            {credits.map((credit, index) => (
+                                <div className="credits__row" key={index}>
+                                    <p className="credits__role">{credit.role}</p>
+                                    <p className="credits__name">{credit.name}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </p>
+                </div>
+                <div>
+                    <div>
+
+                    </div>
+                    <div>
+
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+          </section>
+          <section className="section f">
+              <div className="footer">
+                  <p className="footer__contact__us">
+                      CONTACT US
+                  </p>
+                  <p className="footer__light">
+                      WANT TO COLLABORATE?
+                  </p>
+                  <p className="footer__light">
+                      <a href="mailto:their@email.com?subject=Collaboration%20Inquiry" className="footer__email">
+                          SEND US AN EMAIL
+                      </a>
+                  </p>
+              </div>
+          </section>
+      </div>
   );
 }
