@@ -315,6 +315,8 @@
 .behind__the__scene__body figure img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 
@@ -917,19 +919,19 @@ text-decoration: underline;
     }
     .youtube__video{
         width: 330px;
-        height: 100px;
+        height: 130px;
     }
     .intro__youtube_video__section{
         top: 20;
         width: 100%;
     }
     .intro__youtube_video__section section{
-        padding: 1rem;
-        border: .5rem solid #000000;
-        gap: .5rem;
+        padding: .5rem;
+        border: .4rem solid #000000;
+        gap: .1rem;
     }
     .youtube__video__watch__buttons{
-        gap: .5rem;
+        gap: .1rem;
     }
     .youtube__video__watch__buttons p{
         letter-spacing: .1rem;

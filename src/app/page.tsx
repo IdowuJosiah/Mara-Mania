@@ -268,7 +268,7 @@ export default function Home() {
                       WANT TO COLLABORATE?
                   </p>
                   <p className="footer__light">
-                      <a href="mailto:their@email.com?subject=Collaboration%20Inquiry" className="footer__email">
+                      <a href="mailto:hello@wetalksound.co?subject=Collaboration%20Inquiry" className="footer__email">
                           SEND US AN EMAIL
                       </a>
                   </p>
