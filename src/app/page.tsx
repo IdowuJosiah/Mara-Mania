@@ -157,7 +157,7 @@ export default function Home() {
                       <div className="intro__youtube_video__section">
                           <section>
                               <iframe className="youtube__video"
-                                      src="https://www.youtube.com/embed/sObg5b2nx44?si=871ZKlRg7Vk2ISh8"
+                                      src="https://drive.google.com/file/d/1iUnBkVpic0wz2TCBiKC4qZMKQm4UluXX/preview"
                                       title="YouTube video player" frameBorder="0"
                                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                       referrerPolicy="strict-origin-when-cross-origin"
@@ -171,7 +171,9 @@ export default function Home() {
                                       +
                                   </p>
                                   <p>
-                                      REQUEST ACCESS TO FULLCUT
+                                      <a href="mailto:hello@wetalksound.co?subject=Collaboration%20Inquiry" className="footer__email">
+                                          REQUEST ACCESS TO FULLCUT
+                                      </a>
                                   </p>
                               </div>
 

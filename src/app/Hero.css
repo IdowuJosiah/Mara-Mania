@@ -178,7 +178,7 @@
     padding: 0;
     line-height: 1;
     letter-spacing: clamp(0.2rem, 0.8vw, 1rem); /* letter-spacing scales too */
-    font-size: clamp(1rem, 3.5vw, 4rem); /* scales with viewport, min 1.5rem, max 3rem */
+    font-size: clamp(.8rem, 3.5vw, 4rem); /* scales with viewport, min 1.5rem, max 3rem */
 
 }
 .youtube__video{
@@ -964,7 +964,7 @@ text-decoration: underline;
     }
 
     .behind__the__scene__body figure{
-        height: 150px;
+        height: 130px;
         padding: .1rem 0;
     }
 
