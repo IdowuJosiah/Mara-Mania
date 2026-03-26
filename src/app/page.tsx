@@ -6,10 +6,10 @@ import { useState } from "react";
 
 
 const exhibitionImages = {
-    main: "/bts8.jpg",
-    sub1: "/Still 2025-10-31 143904_1.3.7.webp",
-    sub2: "/Still 2025-11-10 084014_1.1.1.jpg",
-    sub3: "/Still 2025-10-31 143904_1.4.4.jpg",
+    main: "/ex10.webp",
+    sub1: "/ex12.webp",
+    sub2: "/ex1.webp",
+    sub3: "/ex3.webp",
 }
 const behindTheSceneImages = [
      "bts1.webp",
@@ -34,19 +34,22 @@ const credits = [
     { role: "Associate Producer", name: "Anuoluwapo Sangokunle" },
     { role: "Written by", name: "Feranmi Abiola" },
     { role: "Story Consultant", name: "Anuoluwapo Sangokunle" },
+    { role: "Production Design", name: "Jacinta Mbewu" },
     { role: "Edited by", name: "Feranmi Abiola, Boluwatife Bakare" },
     { role: "Second Unit Camera", name: "David Ogunsiakan, Anuoluwapo Sangokunle" },
-    { role: "Sound Recording", name: "[Location Sound Recordist]" },
-    { role: "Sound Design / Mixing", name: "[Sound Designer / Mixer]" },
-    { role: "Original Score / Music by", name: "[Composer / Music Producer]" },
-    { role: "Original Songs by", name: "[Artist(s)]" },
-    { role: "Color / Grading by", name: "Feranmi Abiola" },
-    { role: "Motion Graphics / VFX", name: "Feranmi Abiola, Jacinta Mbewu" },
-    { role: "Production Manager", name: "[Name(s)]" },
-    { role: "Production Assistants", name: "Michael Edokpyai, Moyosoore" },
+    { role: "Sound Recording", name: "Audiovisual Sounds" },
+    { role: "Original Score / Music by", name: "Waris Rasheed Olanrewaju" },
+    { role: "Colorist", name: "Feranmi Abiola" },
+    { role: "Production Assistants", name: "Moyosoreoluwa Azeez" },
     { role: "Production Videography", name: "David Ogunsiakan" },
     { role: "Creative Director", name: "Dunsin Bankole" },
-]
+    // { role: "Featuring", name: "[Main Subjects / Interviewees]" },
+    // { role: "Additional Interviews", name: "[Names]" },
+    // { role: "Archival Footage Courtesy of", name: "[Source(s)]" },
+    // { role: "Licensed Material Courtesy of", name: "[Source(s)]" },
+    // { role: "Special Thanks to", name: "[Individuals, Organizations, Communities]" },
+    // { role: "In association with", name: "[Partner Organizations / Sponsors]" },
+];
 export default function Home() {
     const maraManiaText = [ "MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA","MARAMANIA",]
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
