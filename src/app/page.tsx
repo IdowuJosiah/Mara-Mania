@@ -10,17 +10,24 @@ const exhibitionImages = {
     sub1: "/ex12.webp",
     sub2: "/ex1.webp",
     sub3: "/ex3.webp",
+    sub4: "/sub4.jpg",
+    sub5: "/sub5.jpg",
+    sub6: "/sub6.jpg",
+    sub7: "/ex5.webp",
+    sub8: "/ex6.webp",
+    sub9: "/ex7.webp",
+
 }
 const behindTheSceneImages = [
-     "bts1.webp",
-     "bts2.webp",
-    "bts3.webp",
-     "bts4.webp",
-     "bts5.webp",
-     "bts6.webp",
-   "bts7.webp",
-    "bts8.jpg",
-   "bts9.jpg",
+     "still1.webp",
+     "still2.webp",
+    "still3.webp",
+     "still4.webp",
+     "still6.webp",
+     "still5.webp",
+   "still7.webp",
+    "still8.webp",
+   "still9.webp",
 
 
 ]
@@ -73,10 +80,10 @@ export default function Home() {
                     <div className="hero__description">
                         <p> THE DOCUMENTARY</p>
                         <div className="hero__credits">
-                            <span className="hero__credits__positions">DIRECTED BY - </span><span className="hero__credits__names">BOLUWATIFE BAKARE</span>
+                            <span className="hero__credits__positions">DIRECTED BY - </span><span className="hero__credits__names">FERANMI ABIOLA</span>
                         </div>
                         <div className="hero__credits">
-                            <span className="hero__credits__positions">CINEMATOGRAPHY - </span><span className="hero__credits__names">FERANMI ABIOLA</span><span className="hero__credits__positions"> PRODUCED - </span><span className="hero__credits__names">TOCHUKWU UCHEFUNAH </span>
+                            <span className="hero__credits__positions">CINEMATOGRAPHY - </span><span className="hero__credits__names">BOLUWATIFE BAKARE</span><span className="hero__credits__positions"> PRODUCED - </span><span className="hero__credits__names">TOCHUKWU UCHEFUNAH </span>
                             <span className="hero__credits__positions">EXECUTIVE PRODUCERS - </span><span className="hero__credits__names">MARRIANE OURNAC</span>, <span className="hero__credits__names">DOLAPO AMUSAT</span>, <span className="hero__credits__names">DUNSIN BANKOLE</span>
                         </div>
                     </div>
@@ -172,7 +179,7 @@ export default function Home() {
                                   </p>
                                   <p>
                                       <a href="mailto:hello@wetalksound.co?subject=Collaboration%20Inquiry" className="footer__email">
-                                          REQUEST ACCESS TO FULLCUT
+                                          REQUEST TO VIEW THE FULL DOCUMENTARY
                                       </a>
                                   </p>
                               </div>
@@ -184,6 +191,25 @@ export default function Home() {
               </div>
 
           </section>
+          <section className="section bts">
+              <div className="behind__the__scene">
+                  <div className="behind__the__scene__header">
+                      <h1>
+                          STILLS
+                      </h1>
+                  </div>
+                  <div className="behind__the__scene__body">
+                      {behindTheSceneImages.map((image, index) => (
+                          <figure key={index} onClick={() => setSelectedImage(image)} className="behind__the__scene__figure">
+                              <img src={`/${image}`} alt={`bts ${index + 1}`} />
+                          </figure>
+                      ))}
+                  </div>
+
+              </div>
+
+          </section>
+
           <section className="section e">
 
             <div className="exhibition">
@@ -207,58 +233,62 @@ export default function Home() {
                             <img src={exhibitionImages.sub3} alt="heroimage" />
                         </figure>
                     </div>
+                    <div className="exhibition__sub">
+                        <figure>
+                            <img src={exhibitionImages.sub4} alt="heroimage" />
+                        </figure>
+                        <figure>
+                            <img src={exhibitionImages.sub7} alt="heroimage" />
+                        </figure>
+                        <figure>
+                            <img src={exhibitionImages.sub6} alt="heroimage" />
+                        </figure>
+                    </div>
+                    <div className="exhibition__sub">
+                        <figure>
+                            <img src={exhibitionImages.sub5} alt="heroimage" />
+                        </figure>
+                        <figure>
+                            <img src={exhibitionImages.sub8} alt="heroimage" />
+                        </figure>
+                        <figure>
+                            <img src={exhibitionImages.sub9} alt="heroimage" />
+                        </figure>
+                    </div>
 
                 </section>
             </div>
           </section>
-          <section className="section bts">
-            <div className="behind__the__scene">
-                <div className="behind__the__scene__header">
-                    <h1>
-                        BEHIND THE SCENES
-                    </h1>
-                </div>
-                <div className="behind__the__scene__body">
-                    {behindTheSceneImages.map((image, index) => (
-                        <figure key={index} onClick={() => setSelectedImage(image)} className="behind__the__scene__figure">
-                            <img src={`/${image}`} alt={`bts ${index + 1}`} />
-                        </figure>
-                    ))}
-                </div>
+          {/*<section className="section details c">*/}
+          {/*  <div className="credits__section">*/}
+          {/*      <div className="credits__section__container">*/}
+          {/*          <h1>*/}
+          {/*                  CREDITS*/}
+          {/*          </h1>*/}
+          {/*          <p>*/}
+          {/*              <div className="credits">*/}
+          {/*                  {credits.map((credit, index) => (*/}
+          {/*                      <div className="credits__row" key={index}>*/}
+          {/*                          <p className="credits__role">{credit.role}</p>*/}
+          {/*                          <p className="credits__name">{credit.name}</p>*/}
+          {/*                      </div>*/}
+          {/*                  ))}*/}
+          {/*              </div>*/}
+          {/*          </p>*/}
+          {/*      </div>*/}
+          {/*      <div>*/}
+          {/*          <div>*/}
 
-            </div>
+          {/*          </div>*/}
+          {/*          <div>*/}
 
-          </section>
-          <section className="section details c">
-            <div className="credits__section">
-                <div className="credits__section__container">
-                    <h1>
-                            CREDITS
-                    </h1>
-                    <p>
-                        <div className="credits">
-                            {credits.map((credit, index) => (
-                                <div className="credits__row" key={index}>
-                                    <p className="credits__role">{credit.role}</p>
-                                    <p className="credits__name">{credit.name}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </p>
-                </div>
-                <div>
-                    <div>
+          {/*          </div>*/}
+          {/*          <div>*/}
 
-                    </div>
-                    <div>
-
-                    </div>
-                    <div>
-
-                    </div>
-                </div>
-            </div>
-          </section>
+          {/*          </div>*/}
+          {/*      </div>*/}
+          {/*  </div>*/}
+          {/*</section>*/}
           <section className="section f">
               <div className="footer">
                   <p className="footer__contact__us">
